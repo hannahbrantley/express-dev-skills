@@ -12,8 +12,8 @@ const skills = [
 
   function createNewSkill(newSkillObj) {
     newSkillObj.id = Date.now() % 1000000;
-    newSkillObj.language = newSkillObj.skill;
-    newSkillObj.level = 'beginner';
+    newSkillObj.language = newSkillObj.language;
+    newSkillObj.level = newSkillObj.level;
     skills.push(newSkillObj);
   }
 

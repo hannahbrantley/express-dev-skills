@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
   <h1>New Skill</h1>
   <form action="/skills" method="POST" autocomplete="off">
-    <input type="text" name="skill">
+    <input type="text" name="language" placeholder="language">
+    <input type="text" name="level" placeholder="level">
     <button type="submit">Save New Skill</button>
   </form>
 <%- include('../partials/footer') %>
