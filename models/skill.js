@@ -21,14 +21,20 @@ const skills = [
       return skills;
   }
 
-  function getOne(id) {
-      return skills.find(skill => skill.id === parseInt(id));
+  function getOneSkill(skillId) {
+      return skills.find(skill => skill.id === parseInt(skillId));
+  }
+
+  function updateOneSkill(skillId, skillObj) {
+      const foundSkill = skills.find(skill => skill.id === parseInt(skillId));
+      Object.assign(foundSkill, skillObj);
   }
 
   module.exports = {
       getAll,
-      getOne, 
+      getOneSkill, 
       createNewSkill, 
-      deleteOne
+      deleteOne, 
+      updateOneSkill
   };
 

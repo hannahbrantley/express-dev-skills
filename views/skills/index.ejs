@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express Dev-Skills</title>
-</head>
-<body>
+<%- include('../partials/header') %>
     <h1>Skills</h1>
     <ul>
       <% skills.forEach(function(skill) { %>
@@ -13,13 +6,12 @@
           <form action="/skills/<%= skill.id %>?_method=DELETE"
             class="delete-form" method="POST">
             <button type="submit">X</button>
+          </form>
             <a href="/skills/<%= skill.id %>"><%= skill.language %></a>
             - 
             <%= skill.level %>
-          </form>
         </li>
       <% }); %>
     </ul>
     <a href="/skills/new">Add Skill</a>
-</body>
-</html>
+<%- include('../partials/footer') %>
